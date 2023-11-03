@@ -3,9 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "lumen.web.gui", "Web\Lumen.Web.GUI\lumen.web.gui\lumen.web.gui.esproj", "{A476117E-C8A3-48D4-9156-993BCA794A84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{10F87584-8EDE-4133-B52F-A32EF15FDC47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lumen.Web.GUI", "Lumen.Web.GUI", "{4F4F5FB4-698F-47BE-A135-677645A9164D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E60C2DBA-9995-4487-8444-120D0348335C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A476117E-C8A3-48D4-9156-993BCA794A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A476117E-C8A3-48D4-9156-993BCA794A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A476117E-C8A3-48D4-9156-993BCA794A84}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A476117E-C8A3-48D4-9156-993BCA794A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A476117E-C8A3-48D4-9156-993BCA794A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A476117E-C8A3-48D4-9156-993BCA794A84}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A476117E-C8A3-48D4-9156-993BCA794A84} = {4F4F5FB4-698F-47BE-A135-677645A9164D}
+		{4F4F5FB4-698F-47BE-A135-677645A9164D} = {10F87584-8EDE-4133-B52F-A32EF15FDC47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E0C6999-D2BE-4F58-AEC3-8014D0C0B4C5}

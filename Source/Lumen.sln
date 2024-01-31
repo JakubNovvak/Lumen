@@ -11,6 +11,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lumen.Web.GUI", "Lumen.Web.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E60C2DBA-9995-4487-8444-120D0348335C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumen.Invoice.API", "Services\Invoice\Lumen.Invoice.API\Lumen.Invoice.API.csproj", "{33901CB0-2781-4CE2-A52A-3247978F1F2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Invoice", "Invoice", "{0FD1A8CE-D7EB-4E38-BCD6-E6531DFD7E14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumen.Invoice.Domain", "Services\Invoice\Lumen.Invoice.Domain\Lumen.Invoice.Domain.csproj", "{A27F4A61-EBBE-43DA-AC51-BFD31D84D8D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumen.Invoice.Application", "Services\Invoice\Lumen.Invoice.Application\Lumen.Invoice.Application.csproj", "{92A00FD4-209A-4601-BFBE-3961649FFFE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumen.Invoice.Infrastructure", "Services\Invoice\Lumen.Invoice.Infrastructure\Lumen.Invoice.Infrastructure.csproj", "{A1A40BE3-3782-4C7B-85DE-DA69B9A27ECE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +33,22 @@ Global
 		{A476117E-C8A3-48D4-9156-993BCA794A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A476117E-C8A3-48D4-9156-993BCA794A84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A476117E-C8A3-48D4-9156-993BCA794A84}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{33901CB0-2781-4CE2-A52A-3247978F1F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33901CB0-2781-4CE2-A52A-3247978F1F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33901CB0-2781-4CE2-A52A-3247978F1F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33901CB0-2781-4CE2-A52A-3247978F1F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27F4A61-EBBE-43DA-AC51-BFD31D84D8D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27F4A61-EBBE-43DA-AC51-BFD31D84D8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27F4A61-EBBE-43DA-AC51-BFD31D84D8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27F4A61-EBBE-43DA-AC51-BFD31D84D8D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A00FD4-209A-4601-BFBE-3961649FFFE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A00FD4-209A-4601-BFBE-3961649FFFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A00FD4-209A-4601-BFBE-3961649FFFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A00FD4-209A-4601-BFBE-3961649FFFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A40BE3-3782-4C7B-85DE-DA69B9A27ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A40BE3-3782-4C7B-85DE-DA69B9A27ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A40BE3-3782-4C7B-85DE-DA69B9A27ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A40BE3-3782-4C7B-85DE-DA69B9A27ECE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +56,11 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A476117E-C8A3-48D4-9156-993BCA794A84} = {4F4F5FB4-698F-47BE-A135-677645A9164D}
 		{4F4F5FB4-698F-47BE-A135-677645A9164D} = {10F87584-8EDE-4133-B52F-A32EF15FDC47}
+		{33901CB0-2781-4CE2-A52A-3247978F1F2E} = {0FD1A8CE-D7EB-4E38-BCD6-E6531DFD7E14}
+		{0FD1A8CE-D7EB-4E38-BCD6-E6531DFD7E14} = {E60C2DBA-9995-4487-8444-120D0348335C}
+		{A27F4A61-EBBE-43DA-AC51-BFD31D84D8D8} = {0FD1A8CE-D7EB-4E38-BCD6-E6531DFD7E14}
+		{92A00FD4-209A-4601-BFBE-3961649FFFE1} = {0FD1A8CE-D7EB-4E38-BCD6-E6531DFD7E14}
+		{A1A40BE3-3782-4C7B-85DE-DA69B9A27ECE} = {0FD1A8CE-D7EB-4E38-BCD6-E6531DFD7E14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E0C6999-D2BE-4F58-AEC3-8014D0C0B4C5}

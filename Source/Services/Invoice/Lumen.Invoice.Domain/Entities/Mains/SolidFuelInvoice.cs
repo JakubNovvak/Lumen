@@ -9,5 +9,6 @@ namespace Lumen.Invoice.Domain.Entities.Mains
 {
     public class SolidFuelInvoice : EntityBase
     {
+
     }
 }

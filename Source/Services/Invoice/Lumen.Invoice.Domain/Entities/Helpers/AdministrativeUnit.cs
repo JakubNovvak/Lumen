@@ -9,6 +9,8 @@ namespace Lumen.Invoice.Domain.Entities.Helpers
     public class AdministrativeUnit
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
+
+        //TODO: Lists of invoices if needed
     }
 }

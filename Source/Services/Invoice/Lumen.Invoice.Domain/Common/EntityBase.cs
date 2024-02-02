@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Lumen.Invoice.Domain.Entities.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Lumen.Invoice.Domain.Common
 {
@@ -13,8 +13,8 @@ namespace Lumen.Invoice.Domain.Common
     {
         [Key]
         public int Id { get; set; }
-        public string InvoiceNumber { get; set; }
-        public string AdministrativeUnit { get; set; }
+        public string? InvoiceNumber { get; set; }
+        public AdministrativeUnit? AdministrativeUnit { get; set; }
         public DateTime InitialBillingDate { get; set; }
         public DateTime FinalBillingDate { get; set; }
         private int Status { get; set; }

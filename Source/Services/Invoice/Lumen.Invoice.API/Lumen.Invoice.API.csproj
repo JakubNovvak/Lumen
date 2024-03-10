@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Lumen.Invoice.Application\Lumen.Invoice.Application.csproj" />
     <ProjectReference Include="..\Lumen.Invoice.Domain\Lumen.Invoice.Domain.csproj" />
     <ProjectReference Include="..\Lumen.Invoice.Infrastructure\Lumen.Invoice.Infrastructure.csproj" />
   </ItemGroup>

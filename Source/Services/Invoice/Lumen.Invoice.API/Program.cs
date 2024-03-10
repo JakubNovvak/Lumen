@@ -1,3 +1,4 @@
+using Lumen.Invoice.Application.Services;
 using Lumen.Invoice.Domain.Interfaces;
 using Lumen.Invoice.Infrastructure.Presistence;
 using Lumen.Invoice.Infrastructure.Repositories;
@@ -27,6 +28,7 @@ else
     //TODO: SQL Server for Production
 }
 
+builder.Services.AddScoped<IInvoicesService, InvoicesService>();
 builder.Services.AddScoped<IInvoiceRepo, InvoiceRepo>();
 
 #endregion

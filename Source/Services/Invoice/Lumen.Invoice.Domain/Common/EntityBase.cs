@@ -17,14 +17,14 @@ namespace Lumen.Invoice.Domain.Common
         public AdministrativeUnit? AdministrativeUnit { get; set; }
         public DateTime InitialBillingDate { get; set; }
         public DateTime FinalBillingDate { get; set; }
-        private int Status { get; set; }
-        private bool EReaderSubmitted { get; set; }
-        private int /*User*/ WhoSubmitted { get; set; }
-	    private int /*User*/ WhoApproved { get; set; }
-        private DateTime WhenSubmitted { get; set; }
-        private DateTime WhenLastModified { get; set; }
-        private string? SubmitterComment { get; set; }
-        private string? ApproverComment { get; set; }
+        public int Status { get; set; }
+        public bool EReaderSubmitted { get; set; }
+        public int /*User*/ WhoSubmitted { get; set; }
+        public int /*User*/ WhoApproved { get; set; }
+        public DateTime WhenSubmitted { get; set; }
+        public DateTime WhenLastModified { get; set; }
+        public string? SubmitterComment { get; set; }
+        public string? ApproverComment { get; set; }
 
     }
 }

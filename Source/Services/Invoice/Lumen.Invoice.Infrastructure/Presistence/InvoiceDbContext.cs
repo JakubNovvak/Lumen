@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Lumen.Invoice.Domain.Entities.Mains;
 using Lumen.Invoice.Domain.Entities.Helpers;
+using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
 
 namespace Lumen.Invoice.Infrastructure.Presistence
 {
@@ -14,6 +15,15 @@ namespace Lumen.Invoice.Infrastructure.Presistence
         public InvoiceDbContext(DbContextOptions<InvoiceDbContext> options) : base(options)
         {
             
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<AdministrativeUnit>()
+                .HasMany(a => a.ListOfInvoices)
+                .WithOne(i => i.AdministrativeUnit)
+                .HasForeignKey(i => i.administrativeUnitId)
+                .IsRequired(true);
         }
 
         //Invoices Tables
@@ -26,7 +36,8 @@ namespace Lumen.Invoice.Infrastructure.Presistence
         
         //Helping Tables
 
-        public DbSet<AdministrativeUnit> AdministrativeUnits { get; set; }  
-        public DbSet<HeatDeliveryPoint> HeatDeliveryPoints { get; set; }
+        public DbSet<AdministrativeUnit> AdministrativeUnits { get; set; }
+
+        //TODO: public DbSet<HeatDeliveryPoint> HeatDeliveryPoints { get; set; }
     }
 }

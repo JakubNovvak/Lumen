@@ -50,7 +50,6 @@ namespace Lumen.Invoice.Infrastructure.Presistence
             InvoiceDbContext.ElectricityInvoices.AddRange(
                 new ElectricityInvoice() { 
                     InvoiceNumber="12312421",
-                    AdministrativeUnit = InvoiceDbContext.AdministrativeUnits.FirstOrDefault(),
                     InitialBillingDate = new DateTime(),
                     FinalBillingDate=new DateTime(),
                     EReaderSubmitted = false,
@@ -60,11 +59,12 @@ namespace Lumen.Invoice.Infrastructure.Presistence
                     WhoApproved = 1,
                     WhoSubmitted = 2,
                     ApproverComment = "",
-                    SubmitterComment = ""
+                    SubmitterComment = "",
+
+                    administrativeUnitId = 1
                 },
                 new ElectricityInvoice(){
                     InvoiceNumber = "123456789",
-                    AdministrativeUnit = InvoiceDbContext.AdministrativeUnits.FirstOrDefault(opt => opt.Id == 2),
                     InitialBillingDate = new DateTime(),
                     FinalBillingDate = new DateTime(),
                     EReaderSubmitted = false,
@@ -74,17 +74,15 @@ namespace Lumen.Invoice.Infrastructure.Presistence
                     WhoApproved = 2,
                     WhoSubmitted = 1,
                     ApproverComment = "",
-                    SubmitterComment = ""
+                    SubmitterComment = "",
+
+                    administrativeUnitId = 2
                 }
                 );
 
             InvoiceDbContext.SaveChanges();
 
-            InvoiceDbContext.ElectricityInvoices.ToArray()[0].AdministrativeUnit = InvoiceDbContext.AdministrativeUnits.FirstOrDefault();
-
-            InvoiceDbContext.SaveChanges();
-
-            Console.WriteLine($"{InvoiceDbContext.ElectricityInvoices.ToArray()[0].AdministrativeUnit}");
+            Console.WriteLine($">[PrepDb] {InvoiceDbContext.ElectricityInvoices.ToArray()[0].administrativeUnitId}");
 
         }
     }

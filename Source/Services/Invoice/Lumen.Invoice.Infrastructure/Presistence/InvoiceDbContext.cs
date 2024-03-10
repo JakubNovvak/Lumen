@@ -9,7 +9,7 @@ using Lumen.Invoice.Domain.Entities.Helpers;
 
 namespace Lumen.Invoice.Infrastructure.Presistence
 {
-    class InvoiceDbContext : DbContext
+    public class InvoiceDbContext : DbContext
     {
         public InvoiceDbContext(DbContextOptions<InvoiceDbContext> options) : base(options)
         {
